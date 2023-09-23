@@ -1,0 +1,143 @@
+.productivity {
+    width: 100%;
+    margin-bottom: 9rem;
+    &__heading {
+        @include font-style(1.7rem, $fw-700,$very-dark-blue);
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        margin-bottom: 3.1rem;
+    }
+    &__image {
+        height: 27.5rem;
+        width: 35.7rem;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__illustration {
+        max-height: 100%;
+        max-width: 100%;
+        padding-top: 7rem;
+    }
+    &__description, &__description--2 {
+        @include font-style(1.2rem, $fw-400,$very-dark-blue);
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+    }
+    &__description {
+        margin-bottom: 2rem;
+    }
+    &__description--2 {
+        margin-bottom: 4rem;
+    }
+    &__link {
+        max-width: fit-content;
+        margin-inline: auto;
+        padding-bottom: 6px;
+        border-bottom: 1px solid $moderate-cyan;
+        margin-bottom: 4.3rem;
+    }
+    &__span {
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $moderate-cyan;
+        margin-right: 1rem;
+    }
+    &__feedback-text {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.7;
+        margin-bottom: 1.7rem;
+        @include font-style(1.2rem, $fw-400, $very-dark-blue);
+    }
+    &__avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    }
+    &__name{
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 2px;
+        @include font-style(1.1rem, $fw-700, $very-dark-blue);
+    }
+    &__activity {
+        font-family: 'Open Sans', sans-serif;
+        @include font-style(7px, $fw-400, $very-dark-blue);
+    }
+    &__feedback {
+        padding: 2.2rem 2.9rem;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: -2px 4px 17px 0px $light-gray;
+    }
+}
+ 
+@include down ("medium") {
+    .p-inline-productivity {
+        background-image: url('images/bg-curve-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 320%  100%;
+        margin-bottom: 9.7rem;
+}
+}
+
+@include up("medium") {
+    .p-inline-productivity {
+      flex: 3;
+    }
+    .p-inline-flex {
+        flex: 2;
+    }
+    .productivity {
+        display: flex;
+        flex-direction: row-reverse;
+        background-image: url('images/bg-curve-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding-top: 12.4rem;
+        &__heading {
+            text-align: left;
+            font-size: 2.2rem;
+            margin-bottom: 2.8rem;
+        }
+        &__description,&__description--2 {
+            max-width: 55ch;
+            font-size: 1.1rem;
+        }
+        &__description {
+            margin-bottom: 1.6rem;
+        }
+        &__description--2 {
+            margin-bottom: 1.6rem;
+        }
+        &__link {
+            margin-inline: initial;
+            transition: opacity .3s;
+        }
+        &__feedback {
+            max-width: 28rem;
+            padding-block: 1.8rem;
+            padding-left: 2.4rem;
+            margin-bottom: 3rem;
+            &-text {
+                font-size: 1.1rem;
+            }
+        }
+        &__image {
+            width: 39.3rem;
+            height: 49.2rem;
+        }
+        &__illustration {
+            height: 90%;
+            width: 100%;
+            transform: translateY(-7rem);
+        }
+    }
+}
+
+@media only screen and (hover:hover) {
+    .productivity__link:hover {
+        opacity: .7;
+    }
+}

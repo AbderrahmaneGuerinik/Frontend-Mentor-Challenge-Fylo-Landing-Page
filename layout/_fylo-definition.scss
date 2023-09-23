@@ -1,0 +1,115 @@
+.fylo-definition {
+    margin-bottom: 10rem;
+    &__image {
+        margin-bottom: 4.5rem;
+    }
+    &__heading, &__description {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;   
+        margin-bottom: 3.4rem;
+        line-height: 1.6;
+        @include font-style(2.5rem, $fw-700, $very-dark-blue);
+    }
+    &__description {
+        @include font-style(1.2rem, $fw-400, $very-dark-blue);
+    }
+    &__input {
+        
+        &:focus {
+        border: 1px solid $very-dark-blue;
+        outline: none;
+        }
+        &:invalid {
+            border: 1px solid red;
+        }
+       &:valid + label {
+        display: none;
+       }
+    }
+    &__label {
+        font-family: 'Open Sans', sans-serif;
+        @include font-style(1rem, $fw-400, red);
+        margin-top: .5rem;
+        position: absolute;
+        bottom: -1.7rem;
+        left: 1rem;
+    }
+}
+
+.illustration-1 {
+   width: 34.4rem;
+   height: 28rem;
+   max-width: 100%;
+}
+
+
+@include up("small") {
+    .fylo-definition {
+        &__heading, &__description {
+            max-width: 50rem;
+            margin-inline: auto;
+        }
+        &__heading {
+            max-width: 54.5rem;
+            font-size: 2.3rem;
+        }
+        .illustration-1 {
+          width: 63rem;
+          height: 47rem;
+        }
+     }
+}
+
+@include up("medium") {
+    .fylo-definition {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 34rem;
+        margin-bottom: 12.5rem;
+        &__text {
+            width: 41.8rem;
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__image {
+            margin-bottom: unset;
+            flex: 1;
+        }
+        &__heading, &__description {
+            text-align: left;
+            font-size: 1.3rem;
+            max-width: 50ch;
+        }
+        &__heading {
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 1.8rem;
+            font-size: 2.7rem;
+            max-width: 42rem;
+            margin-left: 0;
+        }
+        &__description {
+            margin-left: 0;
+            max-width: 42rem;
+        }
+
+    }
+    .illustration-1 {
+        max-height: 100%;
+    }
+    .inputs {
+        max-width: 42rem;
+        flex-direction: row;
+    }
+}
+
+@include down ("medium") {
+    .fylo-definition__label {
+        bottom: 1.3rem;
+    }
+}
+
+
+ 

@@ -1,0 +1,70 @@
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.j-c-sb {
+    justify-content: space-between;
+}
+
+.j-c-center {
+    justify-content: center;
+}
+
+.j-c-s {
+    justify-content: start;
+}
+.p-inline, .p-inline-productivity{
+    padding-inline: 3.6rem;
+}
+
+ 
+
+@include up("medium") {
+    .p-inline {
+        padding-inline: 7.8rem;
+     
+    }
+
+}
+
+.inputs {
+    flex-direction: column;
+}
+
+.ml-1 {
+    margin-left: 7px;
+}
+
+
+ 
+@include down ("medium") {
+    .p-relative {
+        margin-inline: auto;
+    }
+}
+
+.position-label {
+    position: relative;
+}
+
+ 
+
+@include down("medium") {
+    .position-label {
+        left: -.5rem;
+    }
+}
+
+
+
+
+
+ 

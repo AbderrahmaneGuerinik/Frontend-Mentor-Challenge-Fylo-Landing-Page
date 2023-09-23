@@ -1,0 +1,27 @@
+$breakpoint-up : ("small": "40em" , "medium" : "64em" , "large" : "87.5em" ); //640px 1020px 1400px
+
+$breakpoint-down : ("small": "40em" , "medium" : "64em" , "large" : "87.5em" );
+
+@mixin up($size) {
+    @media only screen and (min-width: map-get($breakpoint-up, $size)) {
+        @content;
+    }
+}
+
+@mixin down($size) {
+    @media only screen and (max-width: map-get($breakpoint-down, $size)) {
+        @content;
+    }
+}
+
+@mixin down-precise($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin font-style ($font-size, $font-weight, $color) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}

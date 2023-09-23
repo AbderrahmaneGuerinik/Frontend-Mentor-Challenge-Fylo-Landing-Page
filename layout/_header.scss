@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+.header {
+    padding: 6.6rem 7.8rem;
+    margin-bottom: 7rem;
+    &__item:not(:last-child) {
+        margin-right: $mr-big;
+    }
+    &__link {
+        font-family: 'Open Sans', sans-serif; 
+        @include font-style(1.1rem, $fw-400, $very-dark-blue)
+    }
+  
+}
+
+ @include down("small") {
+    .header {
+        padding: 4.4rem  ;
+        &__item:not(:last-child) {
+            margin-right: $mr-small;
+        }
+        &__link {
+            font-size: 1.1rem;
+        }
+        &__logo {
+            max-width: 9.3rem;
+            max-height: 2.8rem;
+        }
+    }
+ }
+
+ @include down-precise(21.25em) {
+    .header {
+        padding: 3rem 1.5rem;
+        &__item:not(:last-child) {
+            margin-right: $mr-xsmall;
+        }
+    }
+ }
+
+ @include down-precise(16.6875em) {
+    .links{
+         flex-direction: column;
+    }
+    .header li{
+        display: block;
+        margin-top: 1rem;
+    }
+ }
+
+ @include up("medium") {
+    .header {
+        margin-bottom: 1rem;
+    }
+ }
+ 
+ 

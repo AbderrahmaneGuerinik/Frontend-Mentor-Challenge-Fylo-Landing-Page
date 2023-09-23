@@ -1,0 +1,87 @@
+.footer {
+    padding-block: 6.4rem;
+    padding-bottom: 6.2rem;
+    background-color: $very-dark-blue;
+    font-family: 'Open Sans', sans-serif; 
+    &__paragraph {
+        font-size: 1.8rem;
+        margin-left: 1.8rem;
+        color: white;
+    }
+    &__icon {
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+    &__flex {
+        margin-bottom: 2.3rem;
+    }
+    &__logo {
+        margin-bottom: 4.5rem;
+    }
+    &__link {
+        font-size: 1.8rem;
+        font-family: 'Open Sans', sans-serif; 
+        color: white;
+        transition: color .3s;
+    }
+    &__list li:not(:last-child) {
+        margin-bottom: 2.2rem;
+    } 
+    &__second-list {
+        margin-top: 4.1rem;
+        & > li:not(:last-child) {
+            margin-bottom: 2.2rem;
+        }
+    }
+    &__flex--2 {
+        margin-bottom: 7rem;
+    }
+    &__nav {
+        margin-bottom: 5.8rem;
+    }
+ 
+}
+ 
+.social:not(:last-child) {
+    margin-right: 1rem;
+}
+.icon {
+    height: 3.3rem;
+    width: 3.5rem;
+    margin-right: 1rem;
+}
+
+@include up("medium") {
+    .p-inline-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer {
+        &__nav {
+            min-width: 30%;
+            margin-bottom: 0;
+            margin-top: 9rem;
+            align-self: flex-end;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+            min-width: 100%;
+        }
+        &__second-list {
+            margin-top: 0;
+        }
+        &__social {
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+    }
+}
+@media only screen and (hover:hover) {
+    .footer__link:hover {
+        color: $bright-blue;
+    }
+}
+ 
+ 

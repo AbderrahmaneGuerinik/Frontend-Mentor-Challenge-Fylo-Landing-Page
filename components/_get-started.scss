@@ -1,0 +1,45 @@
+.get-started {
+    padding-block: 1.6rem;
+    padding-left: 2.2rem;
+    width: 96%;
+    margin-left: 5px;
+    border: 1px solid $very-dark-blue;
+    border-radius: 4px;
+    margin-bottom: 3.4rem;
+    padding-left: 0;
+    transition: opacity .3s;
+    &::placeholder {
+        color: rgba(0,0,0,.3);
+    }
+        display: inline-block;
+        padding-block: 1.5rem;
+        background-color: $bright-blue;   
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        border: none;
+        @include font-style(1.2rem, $fw-700, white);
+
+}
+@include up("small") {
+     .get-started {
+        width: 50rem;
+        display: block;
+        margin-inline: auto;
+    }
+}
+
+@include up("medium") {
+       .get-started {
+        padding-block: 1.3rem;
+        width: 22.7rem;
+        margin: 0;
+        width: 14.5rem;
+        padding-inline: 0;
+    }
+}
+
+@media only screen and (hover:hover) {
+    .get-started:hover {
+        opacity: .7;
+    }
+}

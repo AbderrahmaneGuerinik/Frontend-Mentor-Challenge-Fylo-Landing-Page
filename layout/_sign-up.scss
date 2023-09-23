@@ -1,0 +1,92 @@
+.sign-up {
+    text-align: center;
+    padding-block: 6.6rem;
+    background-color: $desaturated-blue;
+    &__heading {
+        font-family: 'Raleway', sans-serif;
+        @include font-style(2rem, $fw-700, white);
+        margin-bottom: 2.2rem;
+    }
+    &__description {
+        //font-family: 'Raleway', sans-serif;
+        font-family: 'Open Sans', sans-serif; 
+        @include font-style(1.4rem, $fw-400, white);
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+    &__email{
+        margin-bottom: .9rem;
+        padding-left: .8rem;
+        border: none;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+        &:invalid {
+            border: 1px solid red;
+        }
+        &:valid + label {
+            display: none;
+        }
+    }
+    .position-label-2 {
+        margin-inline: auto;
+        left: -.3rem;
+        margin-bottom: 1.2rem;
+    }
+     &__start,.position-label-2 {
+        width: 87%;
+    }
+    &__start {
+        margin-bottom: 0;
+    }
+    &__label {
+        font-family: 'Open Sans', sans-serif; 
+        @include font-style(1rem, $fw-400, red);
+        position: absolute;
+        bottom: -.7rem;
+        left: .6rem;
+    }
+    &__inputs {
+        position: relative;
+    }
+}
+
+.sign-up__email {
+    width: 100%;
+}
+
+.position-label-2 {
+    position: relative;
+}
+ 
+@include up("medium") {
+    .p-inline--sign {
+        display: flex;
+        justify-content: space-between;
+    }
+   .sign-up {
+    &__text {
+        flex: 1;
+        text-align: left;
+    }
+    &__inputs {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 10rem;
+    }
+    &__start {
+        max-width: 20rem;
+    }
+   }
+   .sign-up__inputs .position-label-2 {
+    margin-bottom: 1.8rem;
+    margin-left: 0 ;
+   }
+   .sigh-up__email {
+    margin-bottom: 0;
+   }
+}
